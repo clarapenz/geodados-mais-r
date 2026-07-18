@@ -207,7 +207,6 @@ Introdução ao uso da linguagem de programação R para tratamento de grandes b
 
     ::: {.column width="50%"}
     -   Filtro
-    -   Agrupamento
     -   União
     -   Exportação
     :::
@@ -287,12 +286,14 @@ Conjunto formal de símbolos e regras utilizado para criar algoritmos
 *Lembrando que o computador é um objeto literal!*
 :::
 
+![](presentations/images/Bolo-de-Chocolate.webp){fig-align="center" width="45%"}
+
 ## Por que escolher R? {.theme-section .smaller}
 ::::: {layout="[80,20]" layout-valign="center"}
 ::: {}
-> "Acreditamos fortemente que é melhor dominar uma ferramenta de cada vez, e o R é um ótimo lugar para começar."
+> "In the process, I hope to show that, despite its sometimes frustrating quirks, R is, at its heart, an elegant and beautiful language, well tailored for data science."
 >
-> - Hadley Wickham, Mine Çetinkaya-Rundel & Garrett Grolemund, *R for Data Science* (2ª ed., tradução livre)
+> - Hadley Wickham, *Advanced R*, seção "Why R?"
 
 -   Linguagem gratuita e de código aberto
 -   Criada especificamente para estatística e análise de dados
@@ -380,6 +381,7 @@ canto inferior direito
 </div>
 :::::
 
+
 ## Tipos de arquivo
 
 :::::::: columns
@@ -409,6 +411,49 @@ canto inferior direito
 :::
 ::::
 ::::::::
+
+## Tabelas, variáveis e classes {.smaller}
+::: theme-section
+Uma **tabela** (*data frame*) organiza os dados em linhas e colunas. 
+
+Cada coluna é uma **variável**. 
+
+Cada variável tem uma **classe** (tipo de valor que ela armazena)
+
+::::: columns
+::: {.column width="40%"}
+**Principais classes**
+
+- `character` - texto
+
+- `integer` / `numeric` - números
+
+- `logical` - `TRUE` ou `FALSE`
+
+- `factor` - categorias
+
+**Exemplo:** `month.name` e `airquality`, dados prontos do R
+
+```{r}
+#| echo: true
+#| eval: true
+class(airquality$Ozone)  # integer
+class(airquality$Wind)   # numeric
+class(month.name)        # character
+```
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="56%"}
+```{r}
+#| echo: true
+#| eval: true
+month.name
+head(airquality)
+```
+:::
+:::::
+:::
 
 ## Arquivos que vamos usar {.smaller}
 ::: theme-section
@@ -478,106 +523,129 @@ projeto-alfabetizacao-ba/
 ::::::
 :::::::
 
-## Tabelas, variáveis e classes {.smaller}
-::: theme-section
-Uma **tabela** (*data frame*) organiza os dados em linhas e colunas. 
-
-Cada coluna é uma **variável**. 
-
-Cada variável tem uma **classe** (tipo de valor que ela armazena)
-
-::::: columns
-::: {.column width="40%"}
-**Principais classes**
-
-- `character` - texto
-
-- `integer` / `numeric` - números
-
-- `logical` - `TRUE` ou `FALSE`
-
-- `factor` - categorias
-
-**Exemplo:** `month.name` e `airquality`, dados prontos do R
-
-```{r}
-#| echo: true
-#| eval: false
-class(airquality$Ozone)  # integer
-class(airquality$Wind)   # numeric
-class(month.name)        # character
-```
+## Criar um script {.theme-section .smaller}
+::::: {layout="[45,55]" layout-valign="center"}
+::: {}
+![](presentations/images/script1.png){fig-align="center" width="95%"}
 :::
-::: {.column width="4%"}
-:::
-::: {.column width="56%"}
-```{r}
-#| echo: true
-#| eval: true
-month.name
-head(airquality)
-```
+::: {}
+1.  No menu superior, vá em **File → New File → R Script** (atalho: `Ctrl+Shift+N` no Windows/Linux ou `Cmd+Shift+N` no Mac)
+
+2.  Escreva seu código no novo painel que abrir (o **Script/Source**, no canto superior esquerdo)
+
+3.  Salve com `Ctrl+S` (ou `Cmd+S`), escolha a pasta do projeto e dê um nome terminado em `.R` (ex: `analise.R`)
 :::
 :::::
-:::
+
 
 ## Pacotes em R {.smaller}
-
 ::::::: theme-section
 Um **pacote** é um conjunto de funções, dados e documentação que estende as capacidades do *R base*
-
 Instalar: `install.packages()` (uma vez)
-
 Carregar: `library()` (a cada sessão)
-
 :::::: columns
 ::: {.column width="48%"}
 **Manipulação de dados**
-
 -   `dplyr` - filtrar, agrupar, unir
-
+-   `tidyr` - organizar dados e tratar valores ausentes (NA)
 -   `readxl` - importar e exportar dados em planilhas de excel
-
 -   `stringr` - editar e manipular dados textuais
 :::
-
 ::: {.column width="4%"}
 :::
-
 ::: {.column width="48%"}
 **Dados espaciais**
-
 -   `sf` - dados vetoriais georreferenciados
+-   `ggplot2` - visualização de dados em geral e espaciais
 :::
 ::::::
 
+:::::: columns
+::: {.column width="48%"}
 ```{r}
 #| echo: true
 #| eval: false
 install.packages("dplyr")
+install.packages("tidyr")
 install.packages("stringr")
 install.packages("readxl")
 install.packages("sf")
-
+install.packages("ggplot2")
+```
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+```{r}
+#| echo: true
+#| eval: true
 library(dplyr)
+library(tidyr)
 library(stringr)
 library(readxl)
 library(sf)
+library(ggplot2)
 ```
+:::
+::::::
 :::::::
 
-## Importação {.smaller}
+## Definindo objetos {.smaller}
+::: theme-section
+**Objetos** armazenam valores usando o operador `<-`. Um objeto fica salvo no ambiente (memória temporária)
 
+```{r}
+#| echo: true
+#| eval: true
+a <- 10
+b <- 3
+c <- 7
+
+a + b         # soma
+a - b         # subtração
+a / c         # divisão
+d <- (b / a) * 100 # porcentagem
+```
+:::
+
+## Utilizando o operador `pipe` {.smaller}
+::: theme-section
+O **pipe** (`|>` ou `%>%`) lê o valor que está à esquerda e aplica as funções da direita a tal valor de referência
+
+- Sem o **pipe**, as funções ficam alinhadas de dentro para fora (similar ao excel)
+
+- Com o pipe, as funções ficam em etapas
+
+```{r}
+#| echo: true
+#| eval: true
+# sem pipe
+round(mean(c(a, b, c)), 2)
+
+# com pipe
+c(a, b, c) |>
+  mean() |> # média do conjunto
+  round(2) # arrendondar resultado em duas casas decimais
+```
+
+Nos dois casos, o resultado é o mesmo, mas o segundo modo é mais intuitivo
+
+:::
+
+## Importação {.smaller}
 ::: theme-section
 ```{r}
 #| echo: true
-#| eval: false
+#| eval: true
 # ler geopackage de setores censitários da Bahia
 malha_ba <- st_read("1-inputs/BA_setores_CD2022.gpkg")
-
 # ler arquivo .csv de alfabetização por setor censitário
 alfabetizacao <- read.delim("1-inputs/Agregados_por_setores_alfabetizacao_BR.csv", sep = ";")
 ```
+
+-   `st_read()` - função do pacote `sf` para ler arquivos espaciais
+-   `read.delim()` - função do `R base` para ler arquivos de texto delimitado
+-   `sep = ";"` - parâmetro para colunas do CSV separadas por ponto e vírgula (padrão usado pelo nesse caso)
 :::
 
 ## Visualização {.smaller}
@@ -586,15 +654,16 @@ Checagem básica de estrutura dos dados
 ```{r}
 #| echo: true
 #| eval: false
-head(alfabetizacao)
-tail(alfabetizacao)
-names(alfabetizacao)
-str(alfabetizacao)
+head(alfabetizacao)# 10 primeiros resultados 
+tail(alfabetizacao) # 10 últimos resultados
+slice_sample(alfabetizacao, n = 10)
+names(alfabetizacao) # nomes das variáveis
+str(alfabetizacao) # classes das variáveis
 ```
 
 No dicionário do IBGE, três colunas serão nosso foco:
 
--   `CD_SETOR` - código único de cada setor censitário
+-   `CD_setor` - código único de cada setor censitário
 
 -   `V00900` - pessoas de 15 anos ou mais que sabem ler e escrever
 
@@ -607,55 +676,164 @@ No dicionário do IBGE, três colunas serão nosso foco:
 ::: theme-section
 O CSV do IBGE vem para o Brasil todo - manter apenas os setores da Bahia
 
-⚠️ Atenção especial ao `CD_SETOR`: precisa ser lido como **texto** (`character`), nunca como número!
+⚠️ Atenção especial ao `CD_setor`: precisa ser lido como **texto** (`character`), nunca como número!
 :::
 ```{r}
 #| echo: true
-#| eval: false
-alfabetizacao <- alfabetizacao %>%
-  mutate(CD_SETOR = as.character(CD_SETOR))
+#| eval: true
+alfabetizacao <- alfabetizacao |>
+  mutate(CD_setor = as.character(CD_setor))
 
-# filtrar a coluna CD_SETOR para os registros que começam com 29 - código estadual da Bahia
-alfabetizacao_ba <- alfabetizacao %>%
-  filter(str_starts(CD_SETOR, "29"))
+# filtrar a coluna CD_setor para os registros que começam com 29 - código estadual da Bahia
+alfabetizacao_ba <- alfabetizacao |>
+  filter(str_starts(CD_setor, "29"))
 
 # remover planilha de Brasil inteiro (liberar memória)
 rm(alfabetizacao)
 ```
-:::
+
+Notas:
+
+- função `str_starts()` do pacote stringr lê o(s) primeiro(s) caractere(s) de um texto
+- função `mutate()` cria uma nova variável
+
+
 
 ## Estatística básica {.smaller}
 
 ::: theme-section
-Agora calculamos, para cada setor: o total de pessoas de 15 anos ou mais, quantas não sabem ler, e o percentual de analfabetismo.
+Calcular para cada setor:
+- Total de pessoas de 15 anos ou mais (soma entre saber e não saber ler e escrever)
+  - V00900 + V00901
+
+- Percentual de analfabetismo
+  - V00901 / (V00900 + V00901) * 100
+  
+Existem caracteres "X" na planilha. Forçar para transformar em numérico com função `as.numeric()`
 
 ```{r}
 #| echo: true
-#| eval: false
-alfabetizacao_ba <- alfabetizacao_ba %>%
+#| eval: true
+
+alfabetizacao_ba <- alfabetizacao_ba |>
   mutate(
-    total_15mais       = V00900 + V00901,
-    nao_alfabetizados  = V00901,
-    pct_analfabetismo  = (V00901 / total_15mais) * 100
+    V00900 = as.numeric(V00900),
+    V00901 = as.numeric(V00901),
+    V00900 = replace_na(V00900, 0),
+    V00901 = replace_na(V00901, 0)
   )
 
-summary(alfabetizacao_ba$pct_analfabetismo)
+alfabetizacao_ba <- alfabetizacao_ba |>
+  mutate(
+    total_15mais       = V00900 + V00901,
+    nao_alfab  = V00901,
+    pct_nao_analfab  = (V00901 / total_15mais) * 100
+  ) |>
+  select(CD_setor, total_15mais, nao_alfab, pct_nao_analfab)
+
+summary(alfabetizacao_ba$pct_nao_analfab)
 ```
+
+Notas:
+
+- função `select()` seleciona variáveis desejadas
+
+- função `summary()` indica estatítisticas básicas para uma variável
+
+
 :::
+
+## Checagem da tabela de malha
+
+```{r}
+#| echo: true
+#| eval: true
+names(malha_ba)
+```
+
 
 ## União {.smaller}
 
 ::: theme-section
-Por fim, unimos a tabela tratada à malha espacial, usando o código do setor censitário como chave:
+
+Para unir tabelas, é necessário ter uma variável comum entre elas
+
+A variável comum deve ser da mesma classe em ambas as tabelas!
 
 ```{r}
 #| echo: true
-#| eval: false
-dados_geo <- malha_ba %>%
-  left_join(alfabetizacao_ba, by = "CD_SETOR")
+#| eval: true
+malha_ba <- malha_ba |>
+  mutate(CD_SETOR = as.character(CD_SETOR))
+
+nao_alfab_geo <- malha_ba |>
+  left_join(alfabetizacao_ba, by = c("CD_SETOR" = "CD_setor"))
 ```
 
-Com isso, cada setor da malha passa a carregar o percentual de analfabetismo - pronto para virar mapa.
+Nota: a função `left_join()` une duas tabelas mantendo todos os registros da tabela à esquerda
+
 :::
 
-# Agradecemos! {.thanks-slide background-color="#1B4332"}
+## Mapa {.smaller}
+::: theme-section
+```{r}
+#| echo: true
+#| eval: true
+#| output-location: column
+#| fig-width: 6
+#| fig-height: 6
+ggplot(nao_alfab_geo) +
+  geom_sf(aes(fill = pct_nao_analfab), color = NA) +
+  scale_fill_gradient(
+    low = "#FFF5F0",
+    high = "#99000D",
+    name = "% não\nalfabetizados"
+  ) +
+  labs(title = "2022, Bahia: % de pessoas não alfabetizadas\nsobre alfabetizadas (acima de 15 anos)") +
+  theme_minimal()
+```
+:::
+
+# OFICINA {.green-slide background-color="#1B4332"}
+
+:::: green-content
+[PACOTES `geobr` e `censobr`]{.cover-label}
+
+::: theme-section
+Apresentação do uso simplificado de dados do censo
+:::
+::::
+
+## Bibliografia recomendada
+
+::: center-x
+<iframe src="https://pt.r4ds.hadley.nz/intro.html" width="700" height="394">
+
+</iframe>
+:::
+
+### R para Ciência de Dados (2ª edição)
+
+## Referências e agradecimentos {.smaller}
+::: theme-section
+*Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização do minicurso e da oficina.*
+
+**Referências**
+
+VARTANIAN, Daniel. **r-course**: an introduction to the R programming language. São Paulo: Centro de Estudos da Metrópole, Universidade de São Paulo, 2026. Disponível em: https://github.com/danielvartan/r-course. Acesso em: jul. 2026.
+
+UTRECHT UNIVERSITY. **uu-quarto-presentation-template**: template repository for creating a UU styled Quarto presentation. Utrecht: Utrecht University, [20--]. Disponível em: https://github.com/UtrechtUniversity/uu-quarto-presentation-template. Acesso em: jul. 2026.
+
+WICKHAM, Hadley; ÇETINKAYA-RUNDEL, Mine; GROLEMUND, Garrett. **R for Data Science**: import, tidy, transform, visualize, and model data. 2. ed. Sebastopol: O'Reilly Media, 2023. Disponível em: https://r4ds.hadley.nz/. Acesso em: jul. 2026.
+
+WICKHAM, Hadley. **Advanced R**. 2. ed. Boca Raton: CRC Press, 2019. Disponível em: https://adv-r.hadley.nz/. Acesso em: jul. 2026.
+
+WICKHAM, Hadley. Tidy data. **Journal of Statistical Software**, v. 59, n. 10, p. 1-23, 2014. Disponível em: https://www.jstatsoft.org/v59/i10/. Acesso em: jul. 2026.
+:::
+
+# Agradecemos a atenção! {.thanks-slide background-color="#1B4332"}
+
+
+
+
+

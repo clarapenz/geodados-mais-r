@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-461cf59b612d3a63d05ba1ccc694f5e4.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-57e927ea2d945c7d25bf88ceb9e57eba.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -376,7 +376,6 @@ a_{21}&amp; =b_{21}&amp;
 </div><div class="column" style="width:50%;">
 <ul>
 <li>Filtro</li>
-<li>Agrupamento</li>
 <li>União</li>
 <li>Exportação</li>
 </ul>
@@ -451,16 +450,17 @@ a_{21}&amp; =b_{21}&amp;
 <div class="fragment text-right">
 <p><em>Lembrando que o computador é um objeto literal!</em></p>
 </div>
-</section>
+
+<img data-src="presentations/images/Bolo-de-Chocolate.webp" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
 <section id="por-que-escolher-r" class="slide level2 theme-section smaller">
 <h2>Por que escolher R?</h2>
 <div class="quarto-layout-panel" data-layout="[80,20]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
 <blockquote>
-<p>“Acreditamos fortemente que é melhor dominar uma ferramenta de cada vez, e o R é um ótimo lugar para começar.”</p>
+<p>“In the process, I hope to show that, despite its sometimes frustrating quirks, R is, at its heart, an elegant and beautiful language, well tailored for data science.”</p>
 <ul>
-<li>Hadley Wickham, Mine Çetinkaya-Rundel &amp; Garrett Grolemund, <em>R for Data Science</em> (2ª ed., tradução livre)</li>
+<li>Hadley Wickham, <em>Advanced R</em>, seção “Why R?”</li>
 </ul>
 </blockquote>
 <ul>
@@ -570,6 +570,59 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 </div></div>
 </section>
+<section id="tabelas-variáveis-e-classes" class="slide level2 smaller">
+<h2>Tabelas, variáveis e classes</h2>
+<div class="theme-section">
+<p>Uma <strong>tabela</strong> (<em>data frame</em>) organiza os dados em linhas e colunas.</p>
+<p>Cada coluna é uma <strong>variável</strong>.</p>
+<p>Cada variável tem uma <strong>classe</strong> (tipo de valor que ela armazena)</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Principais classes</strong></p>
+<ul>
+<li><p><code>character</code> - texto</p></li>
+<li><p><code>integer</code> / <code>numeric</code> - números</p></li>
+<li><p><code>logical</code> - <code>TRUE</code> ou <code>FALSE</code></p></li>
+<li><p><code>factor</code> - categorias</p></li>
+</ul>
+<p><strong>Exemplo:</strong> <code>month.name</code> e <code>airquality</code>, dados prontos do R</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Ozone)  <span class="co"># integer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "integer"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Wind)   <span class="co"># numeric</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">class</span>(month.name)        <span class="co"># character</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:56%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>month.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "January"   "February"  "March"     "April"     "May"       "June"     
+ [7] "July"      "August"    "September" "October"   "November"  "December" </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">head</span>(airquality)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+3    12     149 12.6   74     5   3
+4    18     313 11.5   62     5   4
+5    NA      NA 14.3   56     5   5
+6    28      NA 14.9   66     5   6</code></pre>
+</div>
+</div>
+</div></div>
+</div>
+</section>
 <section id="arquivos-que-vamos-usar" class="slide level2 smaller">
 <h2>Arquivos que vamos usar</h2>
 <div class="theme-section">
@@ -628,95 +681,135 @@ a_{21}&amp; =b_{21}&amp;
 </div></div>
 </div>
 </section>
-<section id="tabelas-variáveis-e-classes" class="slide level2 smaller">
-<h2>Tabelas, variáveis e classes</h2>
-<div class="theme-section">
-<p>Uma <strong>tabela</strong> (<em>data frame</em>) organiza os dados em linhas e colunas.</p>
-<p>Cada coluna é uma <strong>variável</strong>.</p>
-<p>Cada variável tem uma <strong>classe</strong> (tipo de valor que ela armazena)</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><strong>Principais classes</strong></p>
-<ul>
-<li><p><code>character</code> - texto</p></li>
-<li><p><code>integer</code> / <code>numeric</code> - números</p></li>
-<li><p><code>logical</code> - <code>TRUE</code> ou <code>FALSE</code></p></li>
-<li><p><code>factor</code> - categorias</p></li>
-</ul>
-<p><strong>Exemplo:</strong> <code>month.name</code> e <code>airquality</code>, dados prontos do R</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Ozone)  <span class="co"># integer</span></span>
-<span id="cb5-2"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Wind)   <span class="co"># numeric</span></span>
-<span id="cb5-3"><a href=""></a><span class="fu">class</span>(month.name)        <span class="co"># character</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div><div class="column" style="width:4%;">
-
-</div><div class="column" style="width:56%;">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>month.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "January"   "February"  "March"     "April"     "May"       "June"     
- [7] "July"      "August"    "September" "October"   "November"  "December" </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">head</span>(airquality)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Ozone Solar.R Wind Temp Month Day
-1    41     190  7.4   67     5   1
-2    36     118  8.0   72     5   2
-3    12     149 12.6   74     5   3
-4    18     313 11.5   62     5   4
-5    NA      NA 14.3   56     5   5
-6    28      NA 14.9   66     5   6</code></pre>
+<section id="criar-um-script" class="slide level2 theme-section smaller">
+<h2>Criar um script</h2>
+<div class="quarto-layout-panel" data-layout="[45,55]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="presentations/images/script1.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
 </div>
-</div></div>
+<div class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: flex-start;">
+<ol type="1">
+<li><p>No menu superior, vá em <strong>File → New File → R Script</strong> (atalho: <code>Ctrl+Shift+N</code> no Windows/Linux ou <code>Cmd+Shift+N</code> no Mac)</p></li>
+<li><p>Escreva seu código no novo painel que abrir (o <strong>Script/Source</strong>, no canto superior esquerdo)</p></li>
+<li><p>Salve com <code>Ctrl+S</code> (ou <code>Cmd+S</code>), escolha a pasta do projeto e dê um nome terminado em <code>.R</code> (ex: <code>analise.R</code>)</p></li>
+</ol>
+</div>
+</div>
 </div>
 </section>
 <section id="pacotes-em-r" class="slide level2 smaller">
 <h2>Pacotes em R</h2>
 <div class="theme-section">
-<p>Um <strong>pacote</strong> é um conjunto de funções, dados e documentação que estende as capacidades do <em>R base</em></p>
-<p>Instalar: <code>install.packages()</code> (uma vez)</p>
-<p>Carregar: <code>library()</code> (a cada sessão)</p>
+<p>Um <strong>pacote</strong> é um conjunto de funções, dados e documentação que estende as capacidades do <em>R base</em> Instalar: <code>install.packages()</code> (uma vez) Carregar: <code>library()</code> (a cada sessão) :::::: columns ::: {.column width=“48%”} <strong>Manipulação de dados</strong> - <code>dplyr</code> - filtrar, agrupar, unir - <code>tidyr</code> - organizar dados e tratar valores ausentes (NA) - <code>readxl</code> - importar e exportar dados em planilhas de excel - <code>stringr</code> - editar e manipular dados textuais</p>
+</div>
+<div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>Dados espaciais</strong> - <code>sf</code> - dados vetoriais georreferenciados - <code>ggplot2</code> - visualização de dados em geral e espaciais</p>
+</div><p>::::::</p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p><strong>Manipulação de dados</strong></p>
-<ul>
-<li><p><code>dplyr</code> - filtrar, agrupar, unir</p></li>
-<li><p><code>readxl</code> - importar e exportar dados em planilhas de excel</p></li>
-<li><p><code>stringr</code> - editar e manipular dados textuais</p></li>
-</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb15-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb15-3"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"stringr"</span>)</span>
+<span id="cb15-4"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb15-5"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb15-6"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div><div class="column" style="width:4%;">
 
 </div><div class="column" style="width:48%;">
-<p><strong>Dados espaciais</strong></p>
-<ul>
-<li><code>sf</code> - dados vetoriais georreferenciados</li>
-</ul>
-</div></div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
-<span id="cb10-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"stringr"</span>)</span>
-<span id="cb10-3"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
-<span id="cb10-4"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb10-5"><a href=""></a></span>
-<span id="cb10-6"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb10-7"><a href=""></a><span class="fu">library</span>(stringr)</span>
-<span id="cb10-8"><a href=""></a><span class="fu">library</span>(readxl)</span>
-<span id="cb10-9"><a href=""></a><span class="fu">library</span>(sf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb16-2"><a href=""></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb16-3"><a href=""></a><span class="fu">library</span>(stringr)</span>
+<span id="cb16-4"><a href=""></a><span class="fu">library</span>(readxl)</span>
+<span id="cb16-5"><a href=""></a><span class="fu">library</span>(sf)</span>
+<span id="cb16-6"><a href=""></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div></div>
+<p>:::::::</p>
+</section>
+<section id="definindo-objetos" class="slide level2 smaller">
+<h2>Definindo objetos</h2>
+<div class="theme-section">
+<p><strong>Objetos</strong> armazenam valores usando o operador <code>&lt;-</code>. Um objeto fica salvo no ambiente (memória temporária)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb17-2"><a href=""></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb17-3"><a href=""></a>c <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb17-4"><a href=""></a></span>
+<span id="cb17-5"><a href=""></a>a <span class="sc">+</span> b         <span class="co"># soma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>a <span class="sc">-</span> b         <span class="co"># subtração</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>a <span class="sc">/</span> c         <span class="co"># divisão</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.428571</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>d <span class="ot">&lt;-</span> (b <span class="sc">/</span> a) <span class="sc">*</span> <span class="dv">100</span> <span class="co"># porcentagem</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="utilizando-o-operador-pipe" class="slide level2 smaller">
+<h2>Utilizando o operador <code>pipe</code></h2>
+<div class="theme-section">
+<p>O <strong>pipe</strong> (<code>|&gt;</code> ou <code>%&gt;%</code>) lê o valor que está à esquerda e aplica as funções da direita a tal valor de referência</p>
+<ul>
+<li><p>Sem o <strong>pipe</strong>, as funções ficam alinhadas de dentro para fora (similar ao excel)</p></li>
+<li><p>Com o pipe, as funções ficam em etapas</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="co"># sem pipe</span></span>
+<span id="cb24-2"><a href=""></a><span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">c</span>(a, b, c)), <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.67</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="co"># com pipe</span></span>
+<span id="cb26-2"><a href=""></a><span class="fu">c</span>(a, b, c) <span class="sc">|&gt;</span></span>
+<span id="cb26-3"><a href=""></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> <span class="co"># média do conjunto</span></span>
+<span id="cb26-4"><a href=""></a>  <span class="fu">round</span>(<span class="dv">2</span>) <span class="co"># arrendondar resultado em duas casas decimais</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.67</code></pre>
+</div>
+</div>
+<p>Nos dois casos, o resultado é o mesmo, mas o segundo modo é mais intuitivo</p>
 </div>
 </section>
 <section id="importação" class="slide level2 smaller">
 <h2>Importação</h2>
 <div class="theme-section">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="co"># ler geopackage de setores censitários da Bahia</span></span>
-<span id="cb11-2"><a href=""></a>malha_ba <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"1-inputs/BA_setores_CD2022.gpkg"</span>)</span>
-<span id="cb11-3"><a href=""></a></span>
-<span id="cb11-4"><a href=""></a><span class="co"># ler arquivo .csv de alfabetização por setor censitário</span></span>
-<span id="cb11-5"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">"1-inputs/Agregados_por_setores_alfabetizacao_BR.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="co"># ler geopackage de setores censitários da Bahia</span></span>
+<span id="cb28-2"><a href=""></a>malha_ba <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"1-inputs/BA_setores_CD2022.gpkg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `BA_setores_CD2022' from data source 
+  `D:\oficinas_dadas\geodados-mais-r\1-inputs\BA_setores_CD2022.gpkg' 
+  using driver `GPKG'
+Simple feature collection with 31070 features and 36 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -46.57728 ymin: -18.34856 xmax: -37.34115 ymax: -8.532821
+Geodetic CRS:  SIRGAS 2000</code></pre>
 </div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="co"># ler arquivo .csv de alfabetização por setor censitário</span></span>
+<span id="cb30-2"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">"1-inputs/Agregados_por_setores_alfabetizacao_BR.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>st_read()</code> - função do pacote <code>sf</code> para ler arquivos espaciais</li>
+<li><code>read.delim()</code> - função do <code>R base</code> para ler arquivos de texto delimitado</li>
+<li><code>sep = ";"</code> - parâmetro para colunas do CSV separadas por ponto e vírgula (padrão usado pelo nesse caso)</li>
+</ul>
 </div>
 </section>
 <section id="visualização" class="slide level2 smaller">
@@ -724,14 +817,15 @@ a_{21}&amp; =b_{21}&amp;
 <div class="theme-section">
 <p>Checagem básica de estrutura dos dados</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">head</span>(alfabetizacao)</span>
-<span id="cb12-2"><a href=""></a><span class="fu">tail</span>(alfabetizacao)</span>
-<span id="cb12-3"><a href=""></a><span class="fu">names</span>(alfabetizacao)</span>
-<span id="cb12-4"><a href=""></a><span class="fu">str</span>(alfabetizacao)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">head</span>(alfabetizacao)<span class="co"># 10 primeiros resultados </span></span>
+<span id="cb31-2"><a href=""></a><span class="fu">tail</span>(alfabetizacao) <span class="co"># 10 últimos resultados</span></span>
+<span id="cb31-3"><a href=""></a><span class="fu">slice_sample</span>(alfabetizacao, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb31-4"><a href=""></a><span class="fu">names</span>(alfabetizacao) <span class="co"># nomes das variáveis</span></span>
+<span id="cb31-5"><a href=""></a><span class="fu">str</span>(alfabetizacao) <span class="co"># classes das variáveis</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>No dicionário do IBGE, três colunas serão nosso foco:</p>
 <ul>
-<li><p><code>CD_SETOR</code> - código único de cada setor censitário</p></li>
+<li><p><code>CD_setor</code> - código único de cada setor censitário</p></li>
 <li><p><code>V00900</code> - pessoas de 15 anos ou mais que sabem ler e escrever</p></li>
 <li><p><code>V00901</code> - pessoas de 15 anos ou mais que não sabem ler e escrever</p></li>
 </ul>
@@ -741,50 +835,154 @@ a_{21}&amp; =b_{21}&amp;
 <h2>Filtro</h2>
 <div class="theme-section">
 <p>O CSV do IBGE vem para o Brasil todo - manter apenas os setores da Bahia</p>
-<p>⚠️ Atenção especial ao <code>CD_SETOR</code>: precisa ser lido como <strong>texto</strong> (<code>character</code>), nunca como número!</p>
+<p>⚠️ Atenção especial ao <code>CD_setor</code>: precisa ser lido como <strong>texto</strong> (<code>character</code>), nunca como número!</p>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> alfabetizacao <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_SETOR =</span> <span class="fu">as.character</span>(CD_SETOR))</span>
-<span id="cb13-3"><a href=""></a></span>
-<span id="cb13-4"><a href=""></a><span class="co"># filtrar a coluna CD_SETOR para os registros que começam com 29 - código estadual da Bahia</span></span>
-<span id="cb13-5"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao <span class="sc">%&gt;%</span></span>
-<span id="cb13-6"><a href=""></a>  <span class="fu">filter</span>(<span class="fu">str_starts</span>(CD_SETOR, <span class="st">"29"</span>))</span>
-<span id="cb13-7"><a href=""></a></span>
-<span id="cb13-8"><a href=""></a><span class="co"># remover planilha de Brasil inteiro (liberar memória)</span></span>
-<span id="cb13-9"><a href=""></a><span class="fu">rm</span>(alfabetizacao)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_setor =</span> <span class="fu">as.character</span>(CD_setor))</span>
+<span id="cb32-3"><a href=""></a></span>
+<span id="cb32-4"><a href=""></a><span class="co"># filtrar a coluna CD_setor para os registros que começam com 29 - código estadual da Bahia</span></span>
+<span id="cb32-5"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
+<span id="cb32-6"><a href=""></a>  <span class="fu">filter</span>(<span class="fu">str_starts</span>(CD_setor, <span class="st">"29"</span>))</span>
+<span id="cb32-7"><a href=""></a></span>
+<span id="cb32-8"><a href=""></a><span class="co"># remover planilha de Brasil inteiro (liberar memória)</span></span>
+<span id="cb32-9"><a href=""></a><span class="fu">rm</span>(alfabetizacao)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>:::</p>
+<p>Notas:</p>
+<ul>
+<li>função <code>str_starts()</code> do pacote stringr lê o(s) primeiro(s) caractere(s) de um texto</li>
+<li>função <code>mutate()</code> cria uma nova variável</li>
+</ul>
 </section>
 <section id="estatística-básica" class="slide level2 smaller">
 <h2>Estatística básica</h2>
 <div class="theme-section">
-<p>Agora calculamos, para cada setor: o total de pessoas de 15 anos ou mais, quantas não sabem ler, e o percentual de analfabetismo.</p>
+<p>Calcular para cada setor: - Total de pessoas de 15 anos ou mais (soma entre saber e não saber ler e escrever) - V00900 + V00901</p>
+<ul>
+<li>Percentual de analfabetismo
+<ul>
+<li>V00901 / (V00900 + V00901) * 100</li>
+</ul></li>
+</ul>
+<p>Existem caracteres “X” na planilha. Forçar para transformar em numérico com função <code>as.numeric()</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb14-3"><a href=""></a>    <span class="at">total_15mais       =</span> V00900 <span class="sc">+</span> V00901,</span>
-<span id="cb14-4"><a href=""></a>    <span class="at">nao_alfabetizados  =</span> V00901,</span>
-<span id="cb14-5"><a href=""></a>    <span class="at">pct_analfabetismo  =</span> (V00901 <span class="sc">/</span> total_15mais) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb14-6"><a href=""></a>  )</span>
-<span id="cb14-7"><a href=""></a></span>
-<span id="cb14-8"><a href=""></a><span class="fu">summary</span>(alfabetizacao_ba<span class="sc">$</span>pct_analfabetismo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
+<span id="cb33-3"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">as.numeric</span>(V00900),</span>
+<span id="cb33-4"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">as.numeric</span>(V00901),</span>
+<span id="cb33-5"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">replace_na</span>(V00900, <span class="dv">0</span>),</span>
+<span id="cb33-6"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">replace_na</span>(V00901, <span class="dv">0</span>)</span>
+<span id="cb33-7"><a href=""></a>  )</span>
+<span id="cb33-8"><a href=""></a></span>
+<span id="cb33-9"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
+<span id="cb33-10"><a href=""></a>  <span class="fu">mutate</span>(</span>
+<span id="cb33-11"><a href=""></a>    <span class="at">total_15mais       =</span> V00900 <span class="sc">+</span> V00901,</span>
+<span id="cb33-12"><a href=""></a>    <span class="at">nao_alfab  =</span> V00901,</span>
+<span id="cb33-13"><a href=""></a>    <span class="at">pct_nao_analfab  =</span> (V00901 <span class="sc">/</span> total_15mais) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb33-14"><a href=""></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb33-15"><a href=""></a>  <span class="fu">select</span>(CD_setor, total_15mais, nao_alfab, pct_nao_analfab)</span>
+<span id="cb33-16"><a href=""></a></span>
+<span id="cb33-17"><a href=""></a><span class="fu">summary</span>(alfabetizacao_ba<span class="sc">$</span>pct_nao_analfab)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  0.000   5.406  13.083  14.821  22.472  75.000     225 </code></pre>
+</div>
+</div>
+<p>Notas:</p>
+<ul>
+<li><p>função <code>select()</code> seleciona variáveis desejadas</p></li>
+<li><p>função <code>summary()</code> indica estatítisticas básicas para uma variável</p></li>
+</ul>
+</div>
+</section>
+<section id="checagem-da-tabela-de-malha" class="slide level2">
+<h2>Checagem da tabela de malha</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">names</span>(malha_ba)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "CD_SETOR"   "SITUACAO"   "CD_SIT"     "CD_TIPO"    "AREA_KM2"  
+ [6] "CD_REGIAO"  "NM_REGIAO"  "CD_UF"      "NM_UF"      "CD_MUN"    
+[11] "NM_MUN"     "CD_DIST"    "NM_DIST"    "CD_SUBDIST" "NM_SUBDIST"
+[16] "CD_BAIRRO"  "NM_BAIRRO"  "CD_NU"      "NM_NU"      "CD_FCU"    
+[21] "NM_FCU"     "CD_AGLOM"   "NM_AGLOM"   "CD_RGINT"   "NM_RGINT"  
+[26] "CD_RGI"     "NM_RGI"     "CD_CONCURB" "NM_CONCURB" "v0001"     
+[31] "v0002"      "v0003"      "v0004"      "v0005"      "v0006"     
+[36] "v0007"      "geom"      </code></pre>
 </div>
 </div>
 </section>
 <section id="união" class="slide level2 smaller">
 <h2>União</h2>
 <div class="theme-section">
-<p>Por fim, unimos a tabela tratada à malha espacial, usando o código do setor censitário como chave:</p>
+<p>Para unir tabelas, é necessário ter uma variável comum entre elas</p>
+<p>A variável comum deve ser da mesma classe em ambas as tabelas!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>dados_geo <span class="ot">&lt;-</span> malha_ba <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href=""></a>  <span class="fu">left_join</span>(alfabetizacao_ba, <span class="at">by =</span> <span class="st">"CD_SETOR"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a>malha_ba <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
+<span id="cb37-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_SETOR =</span> <span class="fu">as.character</span>(CD_SETOR))</span>
+<span id="cb37-3"><a href=""></a></span>
+<span id="cb37-4"><a href=""></a>nao_alfab_geo <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
+<span id="cb37-5"><a href=""></a>  <span class="fu">left_join</span>(alfabetizacao_ba, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CD_SETOR"</span> <span class="ot">=</span> <span class="st">"CD_setor"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Com isso, cada setor da malha passa a carregar o percentual de analfabetismo - pronto para virar mapa.</p>
+<p>Nota: a função <code>left_join()</code> une duas tabelas mantendo todos os registros da tabela à esquerda</p>
+</div>
+</section>
+<section id="mapa" class="slide level2 smaller">
+<h2>Mapa</h2>
+<div class="theme-section">
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">ggplot</span>(nao_alfab_geo) <span class="sc">+</span></span>
+<span id="cb38-2"><a href=""></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> pct_nao_analfab), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb38-3"><a href=""></a>  <span class="fu">scale_fill_gradient</span>(</span>
+<span id="cb38-4"><a href=""></a>    <span class="at">low =</span> <span class="st">"#FFF5F0"</span>,</span>
+<span id="cb38-5"><a href=""></a>    <span class="at">high =</span> <span class="st">"#99000D"</span>,</span>
+<span id="cb38-6"><a href=""></a>    <span class="at">name =</span> <span class="st">"% não</span><span class="sc">\n</span><span class="st">alfabetizados"</span></span>
+<span id="cb38-7"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb38-8"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2022, Bahia: % de pessoas não alfabetizadas</span><span class="sc">\n</span><span class="st">sobre alfabetizadas (acima de 15 anos)"</span>) <span class="sc">+</span></span>
+<span id="cb38-9"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div></div>
 </div>
 </section></section>
-<section id="agradecemos" class="title-slide slide level1 thanks-slide center" data-background-color="#1B4332">
-<h1>Agradecemos!</h1>
+<section>
+<section id="oficina-1" class="title-slide slide level1 green-slide center" data-background-color="#1B4332">
+<h1>OFICINA</h1>
+<div class="green-content">
+<p><span class="cover-label">PACOTES <code>geobr</code> e <code>censobr</code></span></p>
+<div class="theme-section">
+<p>Apresentação do uso simplificado de dados do censo</p>
+</div>
+</div>
+</section>
+<section id="bibliografia-recomendada" class="slide level2">
+<h2>Bibliografia recomendada</h2>
+<div class="center-x">
+<iframe src="https://pt.r4ds.hadley.nz/intro.html" width="700" height="394">
+</iframe>
+</div>
+<h3 id="r-para-ciência-de-dados-2ª-edição">R para Ciência de Dados (2ª edição)</h3>
+</section>
+<section id="referências-e-agradecimentos" class="slide level2 smaller">
+<h2>Referências e agradecimentos</h2>
+<div class="theme-section">
+<p><em>Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização do minicurso e da oficina.</em></p>
+<p><strong>Referências</strong></p>
+<p>VARTANIAN, Daniel. <strong>r-course</strong>: an introduction to the R programming language. São Paulo: Centro de Estudos da Metrópole, Universidade de São Paulo, 2026. Disponível em: https://github.com/danielvartan/r-course. Acesso em: jul. 2026.</p>
+<p>UTRECHT UNIVERSITY. <strong>uu-quarto-presentation-template</strong>: template repository for creating a UU styled Quarto presentation. Utrecht: Utrecht University, [20–]. Disponível em: https://github.com/UtrechtUniversity/uu-quarto-presentation-template. Acesso em: jul. 2026.</p>
+<p>WICKHAM, Hadley; ÇETINKAYA-RUNDEL, Mine; GROLEMUND, Garrett. <strong>R for Data Science</strong>: import, tidy, transform, visualize, and model data. 2. ed.&nbsp;Sebastopol: O’Reilly Media, 2023. Disponível em: https://r4ds.hadley.nz/. Acesso em: jul. 2026.</p>
+<p>WICKHAM, Hadley. <strong>Advanced R</strong>. 2. ed.&nbsp;Boca Raton: CRC Press, 2019. Disponível em: https://adv-r.hadley.nz/. Acesso em: jul. 2026.</p>
+<p>WICKHAM, Hadley. Tidy data. <strong>Journal of Statistical Software</strong>, v. 59, n.&nbsp;10, p.&nbsp;1-23, 2014. Disponível em: https://www.jstatsoft.org/v59/i10/. Acesso em: jul. 2026.</p>
+</div>
+</section></section>
+<section id="agradecemos-a-atenção" class="title-slide slide level1 thanks-slide center" data-background-color="#1B4332">
+<h1>Agradecemos a atenção!</h1>
 
 </section>
     </div>
