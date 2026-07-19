@@ -29,30 +29,25 @@ Introdução ao uso da linguagem de programação R para tratamento de grandes b
 ::::
 
 ## Apresentação {.smaller}
-
 ::::::::::: theme-section
 :::::::::: columns
 ::::: {.column width="47%"}
 ::: bio-name
-Clara Penz
+Clara Penz {{< fa map-location-dot >}} {{< fa heart-pulse >}}
 :::
-
-[clarapenz\@usp.br](mailto:clarapenz@usp.br){.bio-email}
+[clarapenz@usp.br](mailto:clarapenz@usp.br){.bio-email}
 
 ::: bio-text
 Geógrafa, mestranda em Geografia Humana pela USP; atua com metodologias quantitativas para mapeamento e análise de políticas públicas. Participa do projeto "Redes técnicas e digitalização do território nas favelas", desenvolvido pelo CEFAVELA (UFABC); atualmente é estagiária no Instituto de Estudos Brasileiros (USP) no acervo do Milton Santos.
 :::
 :::::
-
 ::: {.column width="6%"}
 :::
-
 ::::: {.column width="47%"}
 ::: bio-name
-João Victor Pavesi de Oliveira
+João Victor Pavesi de Oliveira {{< fa graduation-cap >}}
 :::
-
-[joao.pavesi\@gmail.com](mailto:joao.pavesi@gmail.com){.bio-email}
+[joao.pavesi@gmail.com](mailto:joao.pavesi@gmail.com){.bio-email}
 
 ::: bio-text
 Geógrafo, com mestrado e doutorado em Geografia Humana pela USP; estuda políticas educacionais, direito à cidade e geografia da educação. Participante da Rede Escola Pública e Universidade (REPU); atualmente professor substituto no IFBA-Salvador.
@@ -539,29 +534,47 @@ projeto-alfabetizacao-ba/
 
 
 ## Pacotes em R {.smaller}
+
 ::::::: theme-section
+
 Um **pacote** é um conjunto de funções, dados e documentação que estende as capacidades do *R base*
+
 Instalar: `install.packages()` (uma vez)
+
 Carregar: `library()` (a cada sessão)
+
 :::::: columns
+
 ::: {.column width="48%"}
+
 **Manipulação de dados**
+
 -   `dplyr` - filtrar, agrupar, unir
 -   `tidyr` - organizar dados e tratar valores ausentes (NA)
 -   `readxl` - importar e exportar dados em planilhas de excel
 -   `stringr` - editar e manipular dados textuais
+
 :::
+
 ::: {.column width="4%"}
+
 :::
+
 ::: {.column width="48%"}
+
 **Dados espaciais**
+
 -   `sf` - dados vetoriais georreferenciados
 -   `ggplot2` - visualização de dados em geral e espaciais
+
 :::
+
 ::::::
 
 :::::: columns
+
 ::: {.column width="48%"}
+
 ```{r}
 #| echo: true
 #| eval: false
@@ -572,10 +585,15 @@ install.packages("readxl")
 install.packages("sf")
 install.packages("ggplot2")
 ```
+
 :::
+
 ::: {.column width="4%"}
+
 :::
+
 ::: {.column width="48%"}
+
 ```{r}
 #| echo: true
 #| eval: true
@@ -586,8 +604,11 @@ library(readxl)
 library(sf)
 library(ggplot2)
 ```
+
 :::
+
 ::::::
+
 :::::::
 
 ## Definindo objetos {.smaller}
