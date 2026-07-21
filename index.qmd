@@ -12,15 +12,7 @@ format:
 ::: cover-bg
 :::
 
-:::: {.cover-block .top}
-[MINICURSO]{.cover-label}
-
-::: cover-title
-Análises geográficas a partir de bases públicas de dados: fundamentos e fontes teóricas
-:::
-::::
-
-:::: {.cover-block .bottom}
+:::: cover-block
 [OFICINA]{.cover-label}
 
 ::: cover-title
@@ -55,125 +47,6 @@ Geógrafo, com mestrado e doutorado em Geografia Humana pela USP; estuda políti
 :::::
 ::::::::::
 :::::::::::
-
-# MINICURSO {.green-slide background-color="#1B4332"}
-
-:::: green-content
-[MINICURSO]{.cover-label}
-
-::: theme-section
-Análises geográficas a partir de bases públicas de dados: fundamentos e fontes teóricas
-:::
-::::
-
-## Bullets
-
-::: theme-section
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-:::
-
-## Line Highlighting
-
-::: theme-section
--   Highlight specific lines for emphasis
--   Incrementally highlight additional lines
-
-``` {.python code-line-numbers="4-5|7|10"}
-import numpy as np
-import matplotlib.pyplot as plt
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-:::
-
-::: footer
-Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
-:::
-
-## Executable Code
-
-::: theme-section
-```{r}
-#| echo: true
-#| fig-width: 10
-#| fig-height: 4.5
-plot(cars)
-```
-:::
-
-::: footer
-Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
-:::
-
-## LaTeX Equations
-
-:::::: theme-section
-[MathJax](https://www.mathjax.org/) rendering of equations to HTML
-
-::::: columns
-::: {.column width="40%"}
-``` tex
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-```
-:::
-
-::: {.column width="60%"}
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*} \begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-:::
-:::::
-::::::
-
-::: footer
-Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
-:::
-
-## Column Layout {.smaller}
-
-::::::: theme-section
-Arrange content into columns of varying widths:
-
-:::::: columns
-::: {.column width="35%"}
-#### Motor Trend Car Road Tests
-
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="62%"}
-```{r}
-plot(cars)
-```
-:::
-::::::
-:::::::
 
 # OFICINA {.green-slide background-color="#1B4332"}
 
@@ -837,7 +710,7 @@ Apresentação do uso simplificado de dados do censo
 
 ## Referências e agradecimentos {.smaller}
 ::: theme-section
-*Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização do minicurso e da oficina.*
+*Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização da oficina.*
 
 **Referências**
 

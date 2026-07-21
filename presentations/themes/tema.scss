@@ -129,26 +129,18 @@ section.has-dark-background a, section.has-dark-background a:hover {
 .cover-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #1B4332 0%, #1B4332 50%, #FFFFFF 50%, #FFFFFF 100%);
+  background: #1B4332;
 }
 
 .cover-block {
   position: fixed;
-  width: 40%;
-  text-align: left;
-}
-
-.cover-block.top {
-  top: 12%;
-  left: 6%;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #FFFFFF;
-}
-
-.cover-block.bottom {
-  bottom: 12%;
-  right: 6%;
-  color: #1B4332;
-  text-align: right;
 }
 
 .cover-label {

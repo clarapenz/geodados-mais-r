@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-57e927ea2d945c7d25bf88ceb9e57eba.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-1ad2e57704647f8ec8f34a3b217e2cc3.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,13 +200,7 @@
 <div class="cover-bg">
 
 </div>
-<div class="cover-block top">
-<p><span class="cover-label">MINICURSO</span></p>
-<div class="cover-title">
-<p>Análises geográficas a partir de bases públicas de dados: fundamentos e fontes teóricas</p>
-</div>
-</div>
-<div class="cover-block bottom">
+<div class="cover-block">
 <p><span class="cover-label">OFICINA</span></p>
 <div class="cover-title">
 <p>Introdução ao uso da linguagem de programação R para tratamento de grandes bases de dados georreferenciadas</p>
@@ -234,120 +228,6 @@
 <p><a href="mailto:joao.pavesi@gmail.com" class="bio-email">joao.pavesi@gmail.com</a></p>
 <div class="bio-text">
 <p>Geógrafo, com mestrado e doutorado em Geografia Humana pela USP; estuda políticas educacionais, direito à cidade e geografia da educação. Participante da Rede Escola Pública e Universidade (REPU); atualmente professor substituto no IFBA-Salvador.</p>
-</div>
-</div></div>
-</div>
-</section></section>
-<section>
-<section id="minicurso" class="title-slide slide level1 green-slide center" data-background-color="#1B4332">
-<h1>MINICURSO</h1>
-<div class="green-content">
-<p><span class="cover-label">MINICURSO</span></p>
-<div class="theme-section">
-<p>Análises geográficas a partir de bases públicas de dados: fundamentos e fontes teóricas</p>
-</div>
-</div>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<div class="theme-section">
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
-<ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
-</ul>
-</div>
-</section>
-<section id="line-highlighting" class="slide level2">
-<h2>Line Highlighting</h2>
-<div class="theme-section">
-<ul>
-<li>Highlight specific lines for emphasis</li>
-<li>Incrementally highlight additional lines</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href=""></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-4"><a href=""></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-5"><a href=""></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb1-6"><a href=""></a>ax.plot(theta, r)</span>
-<span id="cb1-7"><a href=""></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-8"><a href=""></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-9"><a href=""></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
-</div>
-</section>
-<section id="executable-code" class="slide level2">
-<h2>Executable Code</h2>
-<div class="theme-section">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">plot</span>(cars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#executable-code">Executable Code</a></p>
-</div>
-</section>
-<section id="latex-equations" class="slide level2">
-<h2>LaTeX Equations</h2>
-<div class="theme-section">
-<p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href=""></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
-<span id="cb3-2"><a href=""></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
-<span id="cb3-3"><a href=""></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
-<span id="cb3-4"><a href=""></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
-<span id="cb3-5"><a href=""></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb3-6"><a href=""></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
-<span id="cb3-7"><a href=""></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
-<span id="cb3-8"><a href=""></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
-<span id="cb3-9"><a href=""></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
-<span id="cb3-10"><a href=""></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:60%;">
-<p><span class="math display">\[\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}\]</span> <span class="math display">\[\begin{align}
-a_{11}&amp; =b_{11}&amp;
-  a_{12}&amp; =b_{12}\\
-a_{21}&amp; =b_{21}&amp;
-  a_{22}&amp; =b_{22}+c_{22}
-\end{align}\]</span></p>
-</div></div>
-</div>
-<div class="footer">
-<p>Learn more: <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">LaTeX Equations</a></p>
-</div>
-</section>
-<section id="column-layout" class="slide level2 smaller">
-<h2>Column Layout</h2>
-<div class="theme-section">
-<p>Arrange content into columns of varying widths:</p>
-<div class="columns">
-<div class="column" style="width:35%;">
-<h4 id="motor-trend-car-road-tests">Motor Trend Car Road Tests</h4>
-<p>The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.</p>
-</div><div class="column" style="width:3%;">
-
-</div><div class="column" style="width:62%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
-</figure>
-</div>
-</div>
 </div>
 </div></div>
 </div>
@@ -589,15 +469,15 @@ a_{21}&amp; =b_{21}&amp;
 </ul>
 <p><strong>Exemplo:</strong> <code>month.name</code> e <code>airquality</code>, dados prontos do R</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Ozone)  <span class="co"># integer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Ozone)  <span class="co"># integer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Wind)   <span class="co"># numeric</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">class</span>(airquality<span class="sc">$</span>Wind)   <span class="co"># numeric</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">class</span>(month.name)        <span class="co"># character</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">class</span>(month.name)        <span class="co"># character</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -606,12 +486,12 @@ a_{21}&amp; =b_{21}&amp;
 
 </div><div class="column" style="width:56%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>month.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>month.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "January"   "February"  "March"     "April"     "May"       "June"     
  [7] "July"      "August"    "September" "October"   "November"  "December" </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">head</span>(airquality)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">head</span>(airquality)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Ozone Solar.R Wind Temp Month Day
 1    41     190  7.4   67     5   1
@@ -731,23 +611,23 @@ a_{21}&amp; =b_{21}&amp;
 <div class="columns">
 <div class="column" style="width:48%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
-<span id="cb15-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"tidyr"</span>)</span>
-<span id="cb15-3"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"stringr"</span>)</span>
-<span id="cb15-4"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
-<span id="cb15-5"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb15-6"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb12-2"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb12-3"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"stringr"</span>)</span>
+<span id="cb12-4"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"readxl"</span>)</span>
+<span id="cb12-5"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb12-6"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:4%;">
 
 </div><div class="column" style="width:48%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb16-2"><a href=""></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb16-3"><a href=""></a><span class="fu">library</span>(stringr)</span>
-<span id="cb16-4"><a href=""></a><span class="fu">library</span>(readxl)</span>
-<span id="cb16-5"><a href=""></a><span class="fu">library</span>(sf)</span>
-<span id="cb16-6"><a href=""></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb13-2"><a href=""></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb13-3"><a href=""></a><span class="fu">library</span>(stringr)</span>
+<span id="cb13-4"><a href=""></a><span class="fu">library</span>(readxl)</span>
+<span id="cb13-5"><a href=""></a><span class="fu">library</span>(sf)</span>
+<span id="cb13-6"><a href=""></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </div>
@@ -757,23 +637,23 @@ a_{21}&amp; =b_{21}&amp;
 <div class="theme-section">
 <p><strong>Objetos</strong> armazenam valores usando o operador <code>&lt;-</code>. Um objeto fica salvo no ambiente (memória temporária)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb17-2"><a href=""></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb17-3"><a href=""></a>c <span class="ot">&lt;-</span> <span class="dv">7</span></span>
-<span id="cb17-4"><a href=""></a></span>
-<span id="cb17-5"><a href=""></a>a <span class="sc">+</span> b         <span class="co"># soma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a>a <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb14-2"><a href=""></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb14-3"><a href=""></a>c <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb14-4"><a href=""></a></span>
+<span id="cb14-5"><a href=""></a>a <span class="sc">+</span> b         <span class="co"># soma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 13</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a>a <span class="sc">-</span> b         <span class="co"># subtração</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a>a <span class="sc">-</span> b         <span class="co"># subtração</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 7</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>a <span class="sc">/</span> c         <span class="co"># divisão</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href=""></a>a <span class="sc">/</span> c         <span class="co"># divisão</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.428571</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a>d <span class="ot">&lt;-</span> (b <span class="sc">/</span> a) <span class="sc">*</span> <span class="dv">100</span> <span class="co"># porcentagem</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a>d <span class="ot">&lt;-</span> (b <span class="sc">/</span> a) <span class="sc">*</span> <span class="dv">100</span> <span class="co"># porcentagem</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -786,15 +666,15 @@ a_{21}&amp; =b_{21}&amp;
 <li><p>Com o pipe, as funções ficam em etapas</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="co"># sem pipe</span></span>
-<span id="cb24-2"><a href=""></a><span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">c</span>(a, b, c)), <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="co"># sem pipe</span></span>
+<span id="cb21-2"><a href=""></a><span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">c</span>(a, b, c)), <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.67</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="co"># com pipe</span></span>
-<span id="cb26-2"><a href=""></a><span class="fu">c</span>(a, b, c) <span class="sc">|&gt;</span></span>
-<span id="cb26-3"><a href=""></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> <span class="co"># média do conjunto</span></span>
-<span id="cb26-4"><a href=""></a>  <span class="fu">round</span>(<span class="dv">2</span>) <span class="co"># arrendondar resultado em duas casas decimais</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="co"># com pipe</span></span>
+<span id="cb23-2"><a href=""></a><span class="fu">c</span>(a, b, c) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href=""></a>  <span class="fu">mean</span>() <span class="sc">|&gt;</span> <span class="co"># média do conjunto</span></span>
+<span id="cb23-4"><a href=""></a>  <span class="fu">round</span>(<span class="dv">2</span>) <span class="co"># arrendondar resultado em duas casas decimais</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.67</code></pre>
 </div>
@@ -806,8 +686,8 @@ a_{21}&amp; =b_{21}&amp;
 <h2>Importação</h2>
 <div class="theme-section">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="co"># ler geopackage de setores censitários da Bahia</span></span>
-<span id="cb28-2"><a href=""></a>malha_ba <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"1-inputs/BA_setores_CD2022.gpkg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="co"># ler geopackage de setores censitários da Bahia</span></span>
+<span id="cb25-2"><a href=""></a>malha_ba <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"1-inputs/BA_setores_CD2022.gpkg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `BA_setores_CD2022' from data source 
   `D:\oficinas_dadas\geodados-mais-r\1-inputs\BA_setores_CD2022.gpkg' 
@@ -818,8 +698,8 @@ Dimension:     XY
 Bounding box:  xmin: -46.57728 ymin: -18.34856 xmax: -37.34115 ymax: -8.532821
 Geodetic CRS:  SIRGAS 2000</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="co"># ler arquivo .csv de alfabetização por setor censitário</span></span>
-<span id="cb30-2"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">"1-inputs/Agregados_por_setores_alfabetizacao_BR.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="co"># ler arquivo .csv de alfabetização por setor censitário</span></span>
+<span id="cb27-2"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">"1-inputs/Agregados_por_setores_alfabetizacao_BR.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li><code>st_read()</code> - função do pacote <code>sf</code> para ler arquivos espaciais</li>
@@ -833,11 +713,11 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <div class="theme-section">
 <p>Checagem básica de estrutura dos dados</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href=""></a><span class="fu">head</span>(alfabetizacao)<span class="co"># 10 primeiros resultados </span></span>
-<span id="cb31-2"><a href=""></a><span class="fu">tail</span>(alfabetizacao) <span class="co"># 10 últimos resultados</span></span>
-<span id="cb31-3"><a href=""></a><span class="fu">slice_sample</span>(alfabetizacao, <span class="at">n =</span> <span class="dv">10</span>)</span>
-<span id="cb31-4"><a href=""></a><span class="fu">names</span>(alfabetizacao) <span class="co"># nomes das variáveis</span></span>
-<span id="cb31-5"><a href=""></a><span class="fu">str</span>(alfabetizacao) <span class="co"># classes das variáveis</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">head</span>(alfabetizacao)<span class="co"># 10 primeiros resultados </span></span>
+<span id="cb28-2"><a href=""></a><span class="fu">tail</span>(alfabetizacao) <span class="co"># 10 últimos resultados</span></span>
+<span id="cb28-3"><a href=""></a><span class="fu">slice_sample</span>(alfabetizacao, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb28-4"><a href=""></a><span class="fu">names</span>(alfabetizacao) <span class="co"># nomes das variáveis</span></span>
+<span id="cb28-5"><a href=""></a><span class="fu">str</span>(alfabetizacao) <span class="co"># classes das variáveis</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>No dicionário do IBGE, três colunas serão nosso foco:</p>
 <ul>
@@ -854,15 +734,15 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <p>⚠️ Atenção especial ao <code>CD_setor</code>: precisa ser lido como <strong>texto</strong> (<code>character</code>), nunca como número!</p>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_setor =</span> <span class="fu">as.character</span>(CD_setor))</span>
-<span id="cb32-3"><a href=""></a></span>
-<span id="cb32-4"><a href=""></a><span class="co"># filtrar a coluna CD_setor para os registros que começam com 29 - código estadual da Bahia</span></span>
-<span id="cb32-5"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
-<span id="cb32-6"><a href=""></a>  <span class="fu">filter</span>(<span class="fu">str_starts</span>(CD_setor, <span class="st">"29"</span>))</span>
-<span id="cb32-7"><a href=""></a></span>
-<span id="cb32-8"><a href=""></a><span class="co"># remover planilha de Brasil inteiro (liberar memória)</span></span>
-<span id="cb32-9"><a href=""></a><span class="fu">rm</span>(alfabetizacao)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a>alfabetizacao <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_setor =</span> <span class="fu">as.character</span>(CD_setor))</span>
+<span id="cb29-3"><a href=""></a></span>
+<span id="cb29-4"><a href=""></a><span class="co"># filtrar a coluna CD_setor para os registros que começam com 29 - código estadual da Bahia</span></span>
+<span id="cb29-5"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao <span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a href=""></a>  <span class="fu">filter</span>(<span class="fu">str_starts</span>(CD_setor, <span class="st">"29"</span>))</span>
+<span id="cb29-7"><a href=""></a></span>
+<span id="cb29-8"><a href=""></a><span class="co"># remover planilha de Brasil inteiro (liberar memória)</span></span>
+<span id="cb29-9"><a href=""></a><span class="fu">rm</span>(alfabetizacao)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notas:</p>
 <ul>
@@ -882,23 +762,23 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 </ul>
 <p>Existem caracteres “X” na planilha. Forçar para transformar em numérico com função <code>as.numeric()</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb33-3"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">as.numeric</span>(V00900),</span>
-<span id="cb33-4"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">as.numeric</span>(V00901),</span>
-<span id="cb33-5"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">replace_na</span>(V00900, <span class="dv">0</span>),</span>
-<span id="cb33-6"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">replace_na</span>(V00901, <span class="dv">0</span>)</span>
-<span id="cb33-7"><a href=""></a>  )</span>
-<span id="cb33-8"><a href=""></a></span>
-<span id="cb33-9"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
-<span id="cb33-10"><a href=""></a>  <span class="fu">mutate</span>(</span>
-<span id="cb33-11"><a href=""></a>    <span class="at">total_15mais       =</span> V00900 <span class="sc">+</span> V00901,</span>
-<span id="cb33-12"><a href=""></a>    <span class="at">nao_alfab  =</span> V00901,</span>
-<span id="cb33-13"><a href=""></a>    <span class="at">pct_nao_analfab  =</span> (V00901 <span class="sc">/</span> total_15mais) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb33-14"><a href=""></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb33-15"><a href=""></a>  <span class="fu">select</span>(CD_setor, total_15mais, nao_alfab, pct_nao_analfab)</span>
-<span id="cb33-16"><a href=""></a></span>
-<span id="cb33-17"><a href=""></a><span class="fu">summary</span>(alfabetizacao_ba<span class="sc">$</span>pct_nao_analfab)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href=""></a>  <span class="fu">mutate</span>(</span>
+<span id="cb30-3"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">as.numeric</span>(V00900),</span>
+<span id="cb30-4"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">as.numeric</span>(V00901),</span>
+<span id="cb30-5"><a href=""></a>    <span class="at">V00900 =</span> <span class="fu">replace_na</span>(V00900, <span class="dv">0</span>),</span>
+<span id="cb30-6"><a href=""></a>    <span class="at">V00901 =</span> <span class="fu">replace_na</span>(V00901, <span class="dv">0</span>)</span>
+<span id="cb30-7"><a href=""></a>  )</span>
+<span id="cb30-8"><a href=""></a></span>
+<span id="cb30-9"><a href=""></a>alfabetizacao_ba <span class="ot">&lt;-</span> alfabetizacao_ba <span class="sc">|&gt;</span></span>
+<span id="cb30-10"><a href=""></a>  <span class="fu">mutate</span>(</span>
+<span id="cb30-11"><a href=""></a>    <span class="at">total_15mais       =</span> V00900 <span class="sc">+</span> V00901,</span>
+<span id="cb30-12"><a href=""></a>    <span class="at">nao_alfab  =</span> V00901,</span>
+<span id="cb30-13"><a href=""></a>    <span class="at">pct_nao_analfab  =</span> (V00901 <span class="sc">/</span> total_15mais) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb30-14"><a href=""></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb30-15"><a href=""></a>  <span class="fu">select</span>(CD_setor, total_15mais, nao_alfab, pct_nao_analfab)</span>
+<span id="cb30-16"><a href=""></a></span>
+<span id="cb30-17"><a href=""></a><span class="fu">summary</span>(alfabetizacao_ba<span class="sc">$</span>pct_nao_analfab)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
   0.000   5.406  13.083  14.821  22.472  75.000     225 </code></pre>
@@ -914,7 +794,7 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <section id="checagem-da-tabela-de-malha" class="slide level2">
 <h2>Checagem da tabela de malha</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">names</span>(malha_ba)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">names</span>(malha_ba)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "CD_SETOR"   "SITUACAO"   "CD_SIT"     "CD_TIPO"    "AREA_KM2"  
  [6] "CD_REGIAO"  "NM_REGIAO"  "CD_UF"      "NM_UF"      "CD_MUN"    
@@ -933,11 +813,11 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <p>Para unir tabelas, é necessário ter uma variável comum entre elas</p>
 <p>A variável comum deve ser da mesma classe em ambas as tabelas!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a>malha_ba <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
-<span id="cb37-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_SETOR =</span> <span class="fu">as.character</span>(CD_SETOR))</span>
-<span id="cb37-3"><a href=""></a></span>
-<span id="cb37-4"><a href=""></a>nao_alfab_geo <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
-<span id="cb37-5"><a href=""></a>  <span class="fu">left_join</span>(alfabetizacao_ba, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CD_SETOR"</span> <span class="ot">=</span> <span class="st">"CD_setor"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a>malha_ba <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href=""></a>  <span class="fu">mutate</span>(<span class="at">CD_SETOR =</span> <span class="fu">as.character</span>(CD_SETOR))</span>
+<span id="cb34-3"><a href=""></a></span>
+<span id="cb34-4"><a href=""></a>nao_alfab_geo <span class="ot">&lt;-</span> malha_ba <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href=""></a>  <span class="fu">left_join</span>(alfabetizacao_ba, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CD_SETOR"</span> <span class="ot">=</span> <span class="st">"CD_setor"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Nota: a função <code>left_join()</code> une duas tabelas mantendo todos os registros da tabela à esquerda</p>
 </div>
@@ -947,20 +827,20 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <div class="theme-section">
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">ggplot</span>(nao_alfab_geo) <span class="sc">+</span></span>
-<span id="cb38-2"><a href=""></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> pct_nao_analfab), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb38-3"><a href=""></a>  <span class="fu">scale_fill_gradient</span>(</span>
-<span id="cb38-4"><a href=""></a>    <span class="at">low =</span> <span class="st">"#FFF5F0"</span>,</span>
-<span id="cb38-5"><a href=""></a>    <span class="at">high =</span> <span class="st">"#99000D"</span>,</span>
-<span id="cb38-6"><a href=""></a>    <span class="at">name =</span> <span class="st">"% não</span><span class="sc">\n</span><span class="st">alfabetizados"</span></span>
-<span id="cb38-7"><a href=""></a>  ) <span class="sc">+</span></span>
-<span id="cb38-8"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2022, Bahia: % de pessoas não alfabetizadas</span><span class="sc">\n</span><span class="st">sobre alfabetizadas (acima de 15 anos)"</span>) <span class="sc">+</span></span>
-<span id="cb38-9"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">ggplot</span>(nao_alfab_geo) <span class="sc">+</span></span>
+<span id="cb35-2"><a href=""></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> pct_nao_analfab), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb35-3"><a href=""></a>  <span class="fu">scale_fill_gradient</span>(</span>
+<span id="cb35-4"><a href=""></a>    <span class="at">low =</span> <span class="st">"#FFF5F0"</span>,</span>
+<span id="cb35-5"><a href=""></a>    <span class="at">high =</span> <span class="st">"#99000D"</span>,</span>
+<span id="cb35-6"><a href=""></a>    <span class="at">name =</span> <span class="st">"% não</span><span class="sc">\n</span><span class="st">alfabetizados"</span></span>
+<span id="cb35-7"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb35-8"><a href=""></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"2022, Bahia: % de pessoas não alfabetizadas</span><span class="sc">\n</span><span class="st">sobre alfabetizadas (acima de 15 anos)"</span>) <span class="sc">+</span></span>
+<span id="cb35-9"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="576"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="576"></p>
 </figure>
 </div>
 </div>
@@ -988,7 +868,7 @@ Geodetic CRS:  SIRGAS 2000</code></pre>
 <section id="referências-e-agradecimentos" class="slide level2 smaller">
 <h2>Referências e agradecimentos</h2>
 <div class="theme-section">
-<p><em>Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização do minicurso e da oficina.</em></p>
+<p><em>Agradecemos à Associação Brasileira de Geógrafos e Geógrafas do Brasil e à organização do Encontro Nacional de Geografia de 2026 pelo espaço e apoio para a realização da oficina.</em></p>
 <p><strong>Referências</strong></p>
 <p>VARTANIAN, Daniel. <strong>r-course</strong>: an introduction to the R programming language. São Paulo: Centro de Estudos da Metrópole, Universidade de São Paulo, 2026. Disponível em: https://github.com/danielvartan/r-course. Acesso em: jul. 2026.</p>
 <p>UTRECHT UNIVERSITY. <strong>uu-quarto-presentation-template</strong>: template repository for creating a UU styled Quarto presentation. Utrecht: Utrecht University, [20–]. Disponível em: https://github.com/UtrechtUniversity/uu-quarto-presentation-template. Acesso em: jul. 2026.</p>
